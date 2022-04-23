@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
 export default function GlobalMenu() {
 	return (
@@ -8,7 +9,8 @@ export default function GlobalMenu() {
 				<ListItem>
 					<Link href="/">
 						<a>
-							<span>아이콘</span>전체 카테고리
+							<MenuSharpIcon fontSize="medium"></MenuSharpIcon>
+							<span>전체 카테고리</span>
 						</a>
 					</Link>
 				</ListItem>
@@ -39,10 +41,21 @@ export default function GlobalMenu() {
 
 const ListBox = styled.ul`
 	display: flex;
-	gap: 50px;
+	gap: 60px;
 	align-items: center;
 `;
 
 const ListItem = styled.li`
 	font-size: 16px;
+	font-weight: 700;
+
+	a:first-child {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			margin-left: 10px;
+		}
+	}
 `;
