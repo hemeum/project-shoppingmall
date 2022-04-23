@@ -1,20 +1,26 @@
-import Room from '@mui/icons-material/Room';
-import Favorite from '@mui/icons-material/Favorite';
-import ShoppingCart from '@mui/icons-material/ShoppingCart';
+import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import styled from 'styled-components';
 
 export default function IconMenu() {
 	return (
 		<IconBox>
-			<Room fontSize="large"></Room>
-			<Favorite fontSize="large"></Favorite>
-			<ShoppingCart fontSize="large"></ShoppingCart>
+			<RoomOutlinedIcon fontSize="large"></RoomOutlinedIcon>
+			<FavoriteBorderOutlinedIcon fontSize="large"></FavoriteBorderOutlinedIcon>
+			<ShoppingCartOutlinedIcon fontSize="large"></ShoppingCartOutlinedIcon>
 		</IconBox>
 	);
 }
 
 const IconBox = styled.div`
 	display: flex;
-	gap: 15px;
+	gap: 30px;
+	> * {
+		cursor: pointer;
+		:hover {
+			color: red;
+		}
+	}
 `;
