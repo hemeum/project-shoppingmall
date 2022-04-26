@@ -9,7 +9,7 @@ export default function BannerNumber({
 }) {
 	return (
 		<PageNumber>
-			{isNumber}
+			{isNumber === 10 ? 1 : isNumber === 0 ? lastNumber : isNumber}
 			<span>/</span>
 			{lastNumber}
 		</PageNumber>

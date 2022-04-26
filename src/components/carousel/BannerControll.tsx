@@ -7,27 +7,32 @@ interface BannerControllProps {
 	isNumber: number;
 	setIsNumber: (isNumber: number) => void;
 	lastNumber: number;
+	setFlag: (flag: boolean) => void;
 }
 
 export default function BannerControll({
 	isNumber,
 	setIsNumber,
 	lastNumber,
+	setFlag,
 }: BannerControllProps) {
 	const handleRightBanner = () => {
-		if (isNumber === lastNumber) {
-			setIsNumber(1);
-		} else {
-			setIsNumber(isNumber + 1);
-		}
+		setTimeout(() => {
+			// 연속해서 클릭 방지위해 setTimeout
+			if (isNumber < lastNumber + 1) {
+				setIsNumber(isNumber + 1);
+				setFlag(false);
+			}
+		}, 200);
 	};
 
 	const handleLeftBanner = () => {
-		if (isNumber === 1) {
-			setIsNumber(lastNumber);
-		} else {
-			setIsNumber(isNumber - 1);
-		}
+		setTimeout(() => {
+			if (isNumber > 0) {
+				setIsNumber(isNumber - 1);
+				setFlag(false);
+			}
+		}, 200);
 	};
 
 	return (
