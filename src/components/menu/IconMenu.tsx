@@ -23,4 +23,5 @@ const IconBox = styled.div`
 			color: red;
 		}
 	}
+	padding-left: 35px;
 `;

@@ -1,19 +1,31 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { useState } from 'react';
+
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CategoryMenu from './CategoryMenu';
 
 export default function GlobalMenu() {
+	const [hoverCtg, setHoverCtg] = useState(false);
 	return (
 		<>
 			<ListBox>
-				<ListItem>
+				<FirstListItem
+					hoverCtg={hoverCtg}
+					onMouseOver={() => {
+						setHoverCtg(true);
+					}}
+					onMouseLeave={() => {
+						setHoverCtg(false);
+					}}
+				>
 					<Link href="/">
 						<a>
 							<MenuSharpIcon fontSize="medium"></MenuSharpIcon>
 							<span>전체 카테고리</span>
 						</a>
 					</Link>
-				</ListItem>
+				</FirstListItem>
 				<ListItem>
 					<Link href="/">
 						<a>신상품</a>
@@ -34,28 +46,59 @@ export default function GlobalMenu() {
 						<a>특가/혜택</a>
 					</Link>
 				</ListItem>
+				{hoverCtg ? (
+					<CategoryMenu setHoverCtg={setHoverCtg}></CategoryMenu>
+				) : undefined}
 			</ListBox>
 		</>
 	);
 }
 
 const ListBox = styled.ul`
+	position: relative;
 	display: flex;
-	gap: 60px;
 	align-items: center;
 `;
 
 const ListItem = styled.li`
 	font-size: 16px;
 	font-weight: 700;
+	padding: 20px 35px;
+	cursor: pointer;
 
-	a:first-child {
+	a {
+		padding-bottom: 3px;
+	}
+	:hover {
+		a {
+			color: red;
+			border-bottom: 1px solid red;
+		}
+	}
+`;
+
+const FirstListItem = styled(ListItem)<{ hoverCtg: boolean }>`
+	padding-left: 0;
+
+	:hover {
+		a {
+			color: red;
+			border-bottom: 0px;
+		}
+	}
+
+	a {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-bottom: 0px;
 
 		span {
 			margin-left: 10px;
 		}
 	}
+
+	${({ hoverCtg }) => {
+		return hoverCtg ? 'a{color:red}' : undefined;
+	}}
 `;
