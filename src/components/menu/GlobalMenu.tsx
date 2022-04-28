@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
-import CategoryMenu from './CategoryMenu';
+import Categorys from './Categorys';
 
 export default function GlobalMenu() {
 	const [hoverCtg, setHoverCtg] = useState(false);
@@ -47,7 +47,7 @@ export default function GlobalMenu() {
 					</Link>
 				</ListItem>
 				{hoverCtg ? (
-					<CategoryMenu setHoverCtg={setHoverCtg}></CategoryMenu>
+					<Categorys setHoverCtg={setHoverCtg}></Categorys>
 				) : undefined}
 			</ListBox>
 		</>
