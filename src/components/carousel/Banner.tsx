@@ -7,7 +7,7 @@ import BannerControll from './BannerControll';
 import BannerNumber from './BannerNumber';
 
 interface BannerProps {
-	items: { id: number; alt: string; imgPath: string }[];
+	items: { id: string; alt: string; imgPath: string }[];
 }
 
 interface styleProps {
@@ -23,7 +23,7 @@ export default function Banner({ items }: BannerProps) {
 	const [rightFlag, setRightFlag] = useState(false);
 	const [leftFlag, setLeftFlag] = useState(false);
 
-	const numbers = items.map((item) => item.id);
+	const numbers = items.map((item) => Number(item.id));
 	const lastNumber = numbers[numbers.length - 1];
 
 	const newItems = [...items];
@@ -109,10 +109,10 @@ export default function Banner({ items }: BannerProps) {
 	return (
 		<>
 			<Carousel ref={CrsRef} length={newItems.length}>
-				{newItems.map((item, index) => {
+				{newItems.map((item) => {
 					return (
 						<BannerItem
-							key={index}
+							key={Number(item.id)}
 							item={item}
 							length={newItems.length}
 						></BannerItem>

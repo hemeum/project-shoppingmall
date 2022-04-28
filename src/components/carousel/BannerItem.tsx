@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface BannerItemProps {
 	key: number;
 	item: {
-		id: number;
+		id: string;
 		alt: string;
 		imgPath: string;
 	};
