@@ -109,10 +109,10 @@ export default function Banner({ items }: BannerProps) {
 	return (
 		<>
 			<Carousel ref={CrsRef} length={newItems.length}>
-				{newItems.map((item) => {
+				{newItems.map((item, index) => {
 					return (
 						<BannerItem
-							key={Number(item.id)}
+							key={index}
 							item={item}
 							length={newItems.length}
 						></BannerItem>
