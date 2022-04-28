@@ -46,5 +46,172 @@
 			"imgPath": "/imgs/main-banner-9.webp"
 		}
 	],
-	"categorys": []
+	"categorys": [
+		{
+			"id": "1",
+			"ctg": "채소",
+			"icon": "fa-solid fa-carrot",
+			"new": false,
+			"kinds": [
+				{
+					"id": "11",
+					"kind": "친환경",
+					"parentId": "1",
+					"items": []
+				},
+				{
+					"id": "12",
+					"kind": "고구마·감자·당근",
+					"parentId": "1",
+					"items": []
+				},
+				{
+					"id": "13",
+					"kind": "시금치·쌈채소·나물",
+					"parentId": "1",
+					"items": []
+				},
+				{
+					"id": "14",
+					"kind": "브로콜리·파프리카·양배추",
+					"parentId": "1",
+					"items": []
+				}
+			]
+		},
+		{
+			"id": "2",
+			"ctg": "과일·견과·쌀",
+			"icon": "fa-solid fa-apple-whole",
+			"new": false,
+			"kinds": [
+				{
+					"id": "21",
+					"kind": "제철과일",
+					"parentId": "2",
+					"items": []
+				},
+				{
+					"id": "22",
+					"kind": "국산과일",
+					"parentId": "2",
+					"items": []
+				},
+				{
+					"id": "23",
+					"kind": "수입과일",
+					"parentId": "2",
+					"items": []
+				},
+				{
+					"id": "24",
+					"kind": "쌀·잡곡",
+					"parentId": "2",
+					"items": []
+				},
+				{
+					"id": "25",
+					"kind": "견과류",
+					"parentId": "2",
+					"items": []
+				}
+			]
+		},
+		{
+			"id": "3",
+			"ctg": "수산·해산·건어물",
+			"icon": "fa-solid fa-fish",
+			"new": false,
+			"kinds": [
+				{
+					"id": "31",
+					"kind": "제철수산",
+					"parentId": "3",
+					"items": []
+				},
+				{
+					"id": "32",
+					"kind": "생선류",
+					"parentId": "3",
+					"items": []
+				},
+				{
+					"id": "33",
+					"kind": "굴비·반건류",
+					"parentId": "3",
+					"items": []
+				},
+				{
+					"id": "34",
+					"kind": "오징어·낙지·문어",
+					"parentId": "3",
+					"items": []
+				}
+			]
+		},
+		{
+			"id": "4",
+			"ctg": "정육·계란",
+			"icon": "fa-solid fa-bacon",
+			"new": false,
+			"kinds": [
+				{
+					"id": "41",
+					"kind": "국내산 소고기",
+					"parentId": "4",
+					"items": []
+				},
+				{
+					"id": "42",
+					"kind": "수입산 소고기",
+					"parentId": "4",
+					"items": []
+				},
+				{
+					"id": "43",
+					"kind": "돼지고기",
+					"parentId": "4",
+					"items": []
+				},
+				{
+					"id": "44",
+					"kind": "닭·오리고기",
+					"parentId": "4",
+					"items": []
+				},
+				{
+					"id": "45",
+					"kind": "양고기",
+					"parentId": "4",
+					"items": []
+				}
+			]
+		},
+		{
+			"id": "5",
+			"ctg": "와인",
+			"icon": "fa-solid fa-wine-bottle",
+			"new": true,
+			"kinds": [
+				{
+					"id": "51",
+					"kind": "레드와인",
+					"parentId": "5",
+					"items": []
+				},
+				{
+					"id": "52",
+					"kind": "화이트와인",
+					"parentId": "5",
+					"items": []
+				},
+				{
+					"id": "53",
+					"kind": "샴페인·스파클링",
+					"parentId": "5",
+					"items": []
+				}
+			]
+		}
+	]
 }
