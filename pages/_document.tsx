@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@mui/styles';
@@ -7,8 +8,17 @@ export default class MyDocument extends Document {
 	render() {
 		return (
 			<Html>
+				<Head>
+					<link
+						rel="stylesheet"
+						href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+					/>
+					<script
+						src="https://kit.fontawesome.com/2f64c83195.js"
+						crossOrigin="anonymous"
+					></script>
+				</Head>
 				<body>
-					<Head></Head>
 					<Main />
 					<NextScript />
 				</body>
