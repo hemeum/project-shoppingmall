@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
-import Categorys from './Categorys';
+import Categorys from './categorys/Categorys';
 
 export default function GlobalMenu() {
 	const [hoverCtg, setHoverCtg] = useState(false);
