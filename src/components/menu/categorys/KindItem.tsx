@@ -22,6 +22,9 @@ export default function KindItem({ kind }: KindItemProps) {
 
 const Item = styled.li`
 	padding: 10.5px 30px 10.5px 15px;
+	opacity: 0;
+	visibility: hidden;
+
 	cursor: pointer;
 
 	:hover {

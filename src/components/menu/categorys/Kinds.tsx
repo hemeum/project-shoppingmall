@@ -5,23 +5,26 @@ import data from './../../../../data.json';
 
 interface KindsProps {
 	kinds: { id: string; kind: string; parentId: string; items: any[] }[];
-	setHoverKind: (hoverKind: boolean) => void;
+	itemIndex: number;
+	itemIndexToggle: boolean;
 }
 
-export default function Kinds({ kinds, setHoverKind }: KindsProps) {
+interface styleProps {
+	leng: number;
+	toggle: boolean;
+	index: number;
+}
+
+export default function Kinds({
+	kinds,
+	itemIndex,
+	itemIndexToggle,
+}: KindsProps) {
 	const ctgs = data.categorys;
 	const ctgLength = ctgs.length;
 
 	return (
-		<All
-			leng={ctgLength}
-			onMouseOver={() => {
-				setHoverKind(true);
-			}}
-			onMouseLeave={() => {
-				setHoverKind(false);
-			}}
-		>
+		<All leng={ctgLength} toggle={itemIndexToggle} index={itemIndex}>
 			{kinds.map((kind) => {
 				return <KindItem key={Number(kind.id)} kind={kind.kind}></KindItem>;
 			})}
@@ -29,17 +32,24 @@ export default function Kinds({ kinds, setHoverKind }: KindsProps) {
 	);
 }
 
-const All = styled.ul<{ leng: number }>`
+const All = styled.ul<styleProps>`
 	position: absolute;
 	top: -1px;
-	right: -210px;
-	width: 210px;
-	height: ${({ leng }) => {
-		return `${leng * 35.3}px`;
-	}};
+	left: 209px;
+	display: block;
+	width: 0px;
 	color: black;
 	border: 1px solid lightgray;
+	border-left: 0px;
 	font-size: 14px;
 	background-color: #e2e2e2;
-	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transition: width 0.5s, opacity 1s, visibility 1s;
+	height: ${({ leng }) => {
+		return `${leng * 35.4}px`;
+	}};
+	z-index: ${({ toggle, index }) => {
+		return toggle ? '300' : `${200 - index}`;
+	}};
 `;

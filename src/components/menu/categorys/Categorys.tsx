@@ -4,27 +4,17 @@ import CategoryItem from './CategoryItem';
 
 import data from '../../../../data.json';
 
-interface CategorysProps {
-	setHoverCtg: (hoverCtg: boolean) => void;
-}
-
-export default function Categorys({ setHoverCtg }: CategorysProps) {
+export default function Categorys() {
 	const ctgs = data.categorys;
 	const ctgLength = ctgs.length;
+
 	return (
-		<All
-			leng={ctgLength}
-			onMouseOver={() => {
-				setHoverCtg(true);
-			}}
-			onMouseLeave={() => {
-				setHoverCtg(false);
-			}}
-		>
+		<All leng={ctgLength}>
 			{ctgs.map((ctg) => {
 				return (
 					<CategoryItem
 						key={Number(ctg.id)}
+						itemIndex={Number(ctg.id) - 1}
 						ctg={ctg.ctg}
 						icon={ctg.icon}
 						kinds={ctg.kinds}
@@ -46,5 +36,20 @@ const All = styled.ul<{ leng: number }>`
 	border: 1px solid lightgray;
 	font-size: 14px;
 	background-color: #fff;
-	z-index: 100;
+	z-index: 200;
+	opacity: 0;
+	visibility: hidden;
+	:hover {
+		border-right: 0px;
+		ul {
+			width: 210px;
+			opacity: 1;
+			visibility: visible;
+			li {
+				opacity: 1;
+				visibility: visible;
+				transition: all 2s;
+			}
+		}
+	}
 `;

@@ -1,25 +1,32 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import Link from 'next/link';
 
+import Link from 'next/link';
 import Kinds from './Kinds';
 
 interface CategoryItemProps {
 	key: number;
+	itemIndex: number;
 	ctg: string;
 	icon: string;
 	kinds: { id: string; kind: string; parentId: string; items: any[] }[];
 }
 
-export default function CategoryItem({ ctg, icon, kinds }: CategoryItemProps) {
-	const [hoverKind, setHoverKind] = useState(false);
+export default function CategoryItem({
+	itemIndex,
+	ctg,
+	icon,
+	kinds,
+}: CategoryItemProps) {
+	const [itemIndexToggle, setItemIndexToggle] = useState(false);
+
 	return (
 		<Item
 			onMouseOver={() => {
-				setHoverKind(true);
+				setItemIndexToggle(true);
 			}}
 			onMouseLeave={() => {
-				setHoverKind(false);
+				setItemIndexToggle(false);
 			}}
 		>
 			<Link href="/">
@@ -28,9 +35,12 @@ export default function CategoryItem({ ctg, icon, kinds }: CategoryItemProps) {
 					{ctg}
 				</a>
 			</Link>
-			{hoverKind ? (
-				<Kinds kinds={kinds} setHoverKind={setHoverKind}></Kinds>
-			) : undefined}
+
+			<Kinds
+				kinds={kinds}
+				itemIndex={itemIndex}
+				itemIndexToggle={itemIndexToggle}
+			></Kinds>
 		</Item>
 	);
 }
