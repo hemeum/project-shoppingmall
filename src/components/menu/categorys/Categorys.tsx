@@ -18,6 +18,7 @@ export default function Categorys() {
 						ctg={ctg.ctg}
 						icon={ctg.icon}
 						kinds={ctg.kinds}
+						isNew={ctg.new}
 					></CategoryItem>
 				);
 			})}

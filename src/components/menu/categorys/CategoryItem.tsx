@@ -10,6 +10,7 @@ interface CategoryItemProps {
 	ctg: string;
 	icon: string;
 	kinds: { id: string; kind: string; parentId: string; items: any[] }[];
+	isNew: boolean;
 }
 
 export default function CategoryItem({
@@ -17,6 +18,7 @@ export default function CategoryItem({
 	ctg,
 	icon,
 	kinds,
+	isNew,
 }: CategoryItemProps) {
 	const [itemIndexToggle, setItemIndexToggle] = useState(false);
 
@@ -33,6 +35,7 @@ export default function CategoryItem({
 				<a>
 					<i className={icon}></i>
 					{ctg}
+					{isNew ? <I className="fa-solid fa-n"></I> : undefined}
 				</a>
 			</Link>
 
@@ -56,7 +59,16 @@ const Item = styled.li`
 		background-color: #e2e2e2;
 	}
 
-	i {
+	i:first-child {
 		margin-right: 10px;
 	}
+`;
+
+const I = styled.i`
+	padding: 2px 3px;
+	border-radius: 50%;
+	margin-left: 10px;
+	font-size: 10px;
+	background-color: pink;
+	color: #fff;
 `;
