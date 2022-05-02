@@ -45,7 +45,7 @@ const All = styled.ul<styleProps>`
 	background-color: #e2e2e2;
 	opacity: 0;
 	visibility: hidden;
-	transition: width 0.5s, opacity 1s, visibility 1s;
+	transition: width 0.5s, opacity 0.5s, visibility 0.5s;
 	height: ${({ leng }) => {
 		return `${leng * 35.4}px`;
 	}};
