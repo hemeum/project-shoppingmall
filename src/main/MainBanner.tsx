@@ -1,4 +1,4 @@
-import Banner from '../components/carousel/Banner';
+import Banner from '../components/carousel/main/Banner';
 
 import styled from 'styled-components';
 import data from './../../data.json';
