@@ -28,24 +28,84 @@ export default function BannerItem({ item }: BannerItemProps) {
 
 	return (
 		<Item>
-			<img src={item.imgPath} alt={item.alt}></img>
-			<p>{item.alt}</p>
-			<p>
-				{Number(item.discount) === 0 ? price + '원' : item.discount + '%'}
+			<ImgBox>
+				<img src={item.imgPath} alt={item.alt}></img>
+				<CartIcon className="fa-solid fa-cart-shopping"></CartIcon>
+			</ImgBox>
+			<Title>{item.alt}</Title>
+			<Price>
 				{Number(item.discount) === 0 ? undefined : (
-					<span>{realDiscountedPrice + '원'}</span>
+					<Discount>{item.discount + '%'}</Discount>
 				)}
-			</p>
-			{Number(item.discount) !== 0 ? <p>{price + '원'}</p> : undefined}
+
+				{Number(item.discount) === 0
+					? price + '원'
+					: realDiscountedPrice + '원'}
+			</Price>
+			{Number(item.discount) !== 0 ? (
+				<NotDiscount>
+					{price + '원'}
+					<Line aria-hidden="true"></Line>
+				</NotDiscount>
+			) : undefined}
 		</Item>
 	);
 }
 
 const Item = styled.li`
 	width: 25%;
+
 	img {
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		object-fit: cover;
 	}
+`;
+
+const Title = styled.p`
+	margin-top: 15px;
+`;
+
+const Price = styled.p`
+	margin-top: 15px;
+	font-weight: 700;
+`;
+
+const Discount = styled.span`
+	margin-right: 10px;
+	color: red;
+`;
+
+const NotDiscount = styled.p`
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	color: #ccc;
+	font-size: 15px;
+`;
+
+const Line = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+`;
+
+const CartIcon = styled.i`
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 12px;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+`;
+
+const ImgBox = styled.div`
+	position: relative;
+	height: 75%;
 `;
