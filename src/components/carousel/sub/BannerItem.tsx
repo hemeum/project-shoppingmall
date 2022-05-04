@@ -76,7 +76,7 @@ const Discount = styled.span`
 	color: red;
 `;
 
-const NotDiscount = styled.p`
+const NotDiscount = styled.div`
 	position: relative;
 	display: inline-block;
 	margin-top: 10px;
