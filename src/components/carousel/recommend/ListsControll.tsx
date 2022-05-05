@@ -1,32 +1,32 @@
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
-import data from './../../../../data.json';
+import data from '../../../../data.json';
 
-interface BannerControllProps {
-	bannerTranslate: number;
-	setBannerTranslate: (bannerTranslate: number) => void;
+interface ListsControllProps {
+	listTranslate: number;
+	setListTranslate: (listTranslate: number) => void;
 }
 
-export default function BannerControll({
-	bannerTranslate,
-	setBannerTranslate,
-}: BannerControllProps) {
+export default function ListsControll({
+	listTranslate,
+	setListTranslate,
+}: ListsControllProps) {
 	const recommendLength = data.recommend.length;
 
 	const rightRef = useRef<HTMLElement>(null);
 	const leftRef = useRef<HTMLElement>(null);
 
 	const handleRightArrow = () => {
-		setBannerTranslate(bannerTranslate + 33.333333);
+		setListTranslate(listTranslate + 33.333333);
 	};
 
 	const handleLeftArrow = () => {
-		setBannerTranslate(bannerTranslate - 33.333333);
+		setListTranslate(listTranslate - 33.333333);
 	};
 
 	useEffect(() => {
 		if (leftRef.current !== null) {
-			if (bannerTranslate === 0 || bannerTranslate < 0) {
+			if (listTranslate === 0 || listTranslate < 0) {
 				leftRef.current.style.opacity = '0';
 				leftRef.current.style.visibility = 'hidden';
 			} else {
@@ -37,7 +37,7 @@ export default function BannerControll({
 
 		if (rightRef.current !== null) {
 			if (
-				Math.floor(bannerTranslate) ===
+				Math.floor(listTranslate) ===
 				Math.floor((33.333333 * recommendLength) / 4 - 33.333333)
 			) {
 				rightRef.current.style.opacity = '0';
@@ -47,7 +47,7 @@ export default function BannerControll({
 				rightRef.current.style.visibility = 'visible';
 			}
 		}
-	}, [bannerTranslate, recommendLength]);
+	}, [listTranslate, recommendLength]);
 
 	return (
 		<>

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 
-interface BannerItemProps {
+interface ListItemProps {
 	item: {
 		id: string;
 		parentId: string;
@@ -15,7 +15,7 @@ interface BannerItemProps {
 	};
 }
 
-export default function BannerItem({ item }: BannerItemProps) {
+export default function ListItem({ item }: ListItemProps) {
 	const priceArr = Array.from(item.price);
 	priceArr.splice(-3, 0, ',');
 	const price = priceArr.join('');

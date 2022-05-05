@@ -1,9 +1,9 @@
-import BannerItem from './BannerItem';
+import ListItem from './ListItem';
 
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
 
-interface BannerProps {
+interface ListsProps {
 	items: {
 		id: string;
 		parentId: string;
@@ -15,10 +15,10 @@ interface BannerProps {
 		only: boolean;
 		limit: boolean;
 	}[];
-	bannerTranslate: number;
+	listTranslate: number;
 }
 
-export default function Banner({ items, bannerTranslate }: BannerProps) {
+export default function Lists({ items, listTranslate }: ListsProps) {
 	const newItems = [...items];
 	const firstItems = newItems.splice(0, 4);
 	const secondItems = newItems.splice(0, 4);
@@ -28,25 +28,25 @@ export default function Banner({ items, bannerTranslate }: BannerProps) {
 
 	useEffect(() => {
 		if (conRef.current !== null) {
-			conRef.current.style.transform = `translateX(-${bannerTranslate}%)`;
+			conRef.current.style.transform = `translateX(-${listTranslate}%)`;
 		}
-	}, [bannerTranslate]);
+	}, [listTranslate]);
 
 	return (
 		<Con ref={conRef}>
 			<List>
 				{firstItems.map((item) => {
-					return <BannerItem key={item.id} item={item}></BannerItem>;
+					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>
 			<List>
 				{secondItems.map((item) => {
-					return <BannerItem key={item.id} item={item}></BannerItem>;
+					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>
 			<List>
 				{thirdItems.map((item) => {
-					return <BannerItem key={item.id} item={item}></BannerItem>;
+					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>
 		</Con>
