@@ -47,7 +47,13 @@
 				"imgPath": "/imgs/main-banner-9.webp"
 			}
 		],
-		"sub": []
+		"sub": [
+			{
+				"id": "1",
+				"alt": "기념일 인기 메뉴 특가 + 최대 30% 할인 / 설레는 기념일, 특별한 만찬 준비",
+				"imgPath": "/imgs/sub-banner-1.webp"
+			}
+		]
 	},
 	"categorys": [
 		{
@@ -568,7 +574,7 @@
 							"alt": "1등급 한우 우둔 장조림용 200g (냉장)",
 							"imgPath": "/imgs/meat/cow/meat-4.jpg",
 							"price": "13000",
-							"discount": "0",
+							"discount": "5",
 							"desc": "100g당 판매가 : 6,00",
 							"only": false,
 							"limit": false
@@ -924,6 +930,144 @@
 			"price": "4500",
 			"discount": "0",
 			"desc": "따끈하면서도 시원한 한 그릇",
+			"only": true,
+			"limit": false
+		}
+	],
+	"regret": [
+		{
+			"id": "512",
+			"parentId": "51",
+			"alt": "[복슬강아지] 야채스틱(황태)",
+			"imgPath": "/imgs/pets/snacks/pet-2.jpg",
+			"price": "5700",
+			"discount": "20",
+			"desc": "야채 듬뿍 수제 간식 (생후 5개월 이상)",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "116",
+			"parentId": "11",
+			"alt": "친환경 감자 600g",
+			"imgPath": "/imgs/vegetables/eco/vegetables-6.jpg",
+			"price": "4290",
+			"discount": "10",
+			"desc": "어떤 음식을 해도 잘 어울리는 무농약 감자",
+			"only": false,
+			"limit": false
+		},
+
+		{
+			"id": "216",
+			"parentId": "21",
+			"alt": "GAP 신틸라 블루베리 100g",
+			"imgPath": "/imgs/fruits/season/seasonal-6.jpg",
+			"price": "7990",
+			"discount": "10",
+			"desc": "상큼하게 터지는 보랏빛 달콤함",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "414",
+			"parentId": "41",
+			"alt": "1등급 한우 우둔 장조림용 200g (냉장)",
+			"imgPath": "/imgs/meat/cow/meat-4.jpg",
+			"price": "13000",
+			"discount": "5",
+			"desc": "100g당 판매가 : 6,00",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "219",
+			"parentId": "21",
+			"alt": "청도 산딸기 250g",
+			"imgPath": "/imgs/fruits/season/seasonal-9.jpg",
+			"price": "12800",
+			"discount": "10",
+			"desc": "보석처럼 영근 새콤달콤함",
+			"only": false,
+			"limit": true
+		},
+
+		{
+			"id": "313",
+			"parentId": "31",
+			"alt": "[양포어장] 동해 손질 가자미 350g (2마리) (생물)",
+			"imgPath": "/imgs/fish/season/fish-3.jpg",
+			"price": "11250",
+			"discount": "10",
+			"desc": "편하게 즐기는 담백한 맛",
+			"only": true,
+			"limit": false
+		},
+
+		{
+			"id": "3110",
+			"parentId": "31",
+			"alt": "[어부네] 손질 가자미 2종 (냉동)",
+			"imgPath": "/imgs/fish/season/fish-10.jpg",
+			"price": "5700",
+			"discount": "10",
+			"desc": "깔끔하게 손질한 신선 가자미",
+			"only": false,
+			"limit": false
+		},
+
+		{
+			"id": "513",
+			"parentId": "51",
+			"alt": "[복슬강아지] 곡물스틱",
+			"imgPath": "/imgs/pets/snacks/pet-3.jpg",
+			"price": "5200",
+			"discount": "20",
+			"desc": "곡물 듬뿍 수제 간식 (생후 5개월 이상)",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "515",
+			"parentId": "51",
+			"alt": "[복슬강아지] DOG 오리 치즈 미트볼",
+			"imgPath": "/imgs/pets/snacks/pet-5.jpg",
+			"price": "6500",
+			"discount": "10",
+			"desc": "오리고기 미트볼 안에 치즈가 쏙",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "517",
+			"parentId": "51",
+			"alt": "[예스] 오리고기 저키",
+			"imgPath": "/imgs/pets/snacks/pet-7.jpg",
+			"price": "6800",
+			"discount": "15",
+			"desc": "첨가물 없는 컷팅 오리고기 육포",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "518",
+			"parentId": "51",
+			"alt": "[하림펫푸드] DOG 크리미 4종",
+			"imgPath": "/imgs/pets/snacks/pet-8.jpg",
+			"price": "2800",
+			"discount": "20",
+			"desc": "크리미한 질감의 영양 간식",
+			"only": false,
+			"limit": false
+		},
+		{
+			"id": "519",
+			"parentId": "51",
+			"alt": "[마도로스펫] 동결건조 북어 트릿 70g",
+			"imgPath": "/imgs/pets/snacks/pet-9.jpg",
+			"price": "9900",
+			"discount": "15",
+			"desc": "첨가물 없는 북어 100% 단일 원재료 간식",
 			"only": true,
 			"limit": false
 		}
