@@ -1,7 +1,7 @@
-import Lists from '../components/carousel/recommend/Lists';
-import ListsTitle from '../components/carousel/recommend/ListsTitle';
+import Lists from '../components/carousel/list/Lists';
+import ListsTitle from '../components/carousel/list/ListsTitle';
 import Container from '@mui/material/Container';
-import ListsControll from '../components/carousel/recommend/ListsControll';
+import ListsControll from '../components/carousel/list/ListsControll';
 
 import styled from 'styled-components';
 import data from '../../data.json';
