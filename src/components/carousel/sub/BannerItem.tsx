@@ -55,15 +55,23 @@ export default function BannerItem({ item }: BannerItemProps) {
 const Item = styled.li`
 	width: 25%;
 
+	:hover {
+		img {
+			transform: scale(1.05);
+		}
+	}
+
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: transform 0.5s;
 	}
 `;
 
 const Title = styled.p`
 	margin-top: 15px;
+	line-height: 24px;
 `;
 
 const Price = styled.p`
@@ -108,4 +116,6 @@ const CartIcon = styled.i`
 const ImgBox = styled.div`
 	position: relative;
 	height: 75%;
+	overflow: hidden;
+	cursor: pointer;
 `;

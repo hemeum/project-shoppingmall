@@ -1,6 +1,7 @@
 import BannerItem from './BannerItem';
 
 import styled from 'styled-components';
+import { useEffect, useRef } from 'react';
 
 interface BannerProps {
 	items: {
@@ -14,16 +15,25 @@ interface BannerProps {
 		only: boolean;
 		limit: boolean;
 	}[];
+	bannerTranslate: number;
 }
 
-export default function Banner({ items }: BannerProps) {
+export default function Banner({ items, bannerTranslate }: BannerProps) {
 	const newItems = [...items];
 	const firstItems = newItems.splice(0, 4);
 	const secondItems = newItems.splice(0, 4);
 	const thirdItems = newItems.splice(0, 4);
 
+	const conRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (conRef.current !== null) {
+			conRef.current.style.transform = `translateX(-${bannerTranslate}%)`;
+		}
+	}, [bannerTranslate]);
+
 	return (
-		<Con>
+		<Con ref={conRef}>
 			<List>
 				{firstItems.map((item) => {
 					return <BannerItem key={item.id} item={item}></BannerItem>;
@@ -46,12 +56,12 @@ export default function Banner({ items }: BannerProps) {
 const Con = styled.div`
 	width: 300%;
 	display: flex;
-	align-items: center;
+	transition: all 0.5s;
 `;
 
 const List = styled.ul`
+	position: relative;
 	width: 33.333333%;
 	display: flex;
 	gap: 20px;
-	border: 1px solid red;
 `;
