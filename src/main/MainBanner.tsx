@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import data from './../../data.json';
 
 export default function MainBanner() {
-	const items = data.banners;
+	const items = data.banners.main;
 
 	return (
 		<>
