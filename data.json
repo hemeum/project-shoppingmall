@@ -52,6 +52,11 @@
 				"id": "1",
 				"alt": "기념일 인기 메뉴 특가 + 최대 30% 할인 / 설레는 기념일, 특별한 만찬 준비",
 				"imgPath": "/imgs/sub-banner-1.webp"
+			},
+			{
+				"id": "2",
+				"alt": "문 앞까지 신선하게, 퀄리티 있게 배송! / 샛별·택배 배송안내 보기",
+				"imgPath": "/imgs/sub-banner-2.webp"
 			}
 		]
 	},
@@ -1071,5 +1076,6 @@
 			"only": true,
 			"limit": false
 		}
-	]
+	],
+	"insta": []
 }
