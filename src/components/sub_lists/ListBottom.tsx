@@ -19,4 +19,5 @@ const Address = styled.p`
 	left: 50%;
 	transform: translateX(-50%);
 	font-weight: bold;
+	cursor: pointer;
 `;
