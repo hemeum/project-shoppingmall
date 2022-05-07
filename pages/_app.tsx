@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import Nav from '../src/global/Nav';
 import Container from '@mui/material/Container';
+import Footer from '../src/global/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				</Container>
 			</header>
 			<Component {...pageProps} />
+			<Footer></Footer>
 		</>
 	);
 }
