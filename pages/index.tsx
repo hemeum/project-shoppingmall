@@ -6,6 +6,7 @@ import RecommendList from '../src/main/RecommendList';
 import DiscountBanner from '../src/main/DiscountBanner';
 import RegretList from '../src/main/RegretList';
 import DeliveryBanner from '../src/main/DeliveryBanner';
+import InstaList from '../src/main/InstaList';
 
 const Home: NextPage = () => {
 	return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 				<DiscountBanner></DiscountBanner>
 				<RegretList></RegretList>
 				<DeliveryBanner></DeliveryBanner>
+				<InstaList></InstaList>
 			</Main>
 		</>
 	);
