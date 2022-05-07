@@ -1077,5 +1077,31 @@
 			"limit": false
 		}
 	],
-	"insta": []
+	"insta": [
+		{
+			"id": "1",
+			"alt": "인스타그램 고객 후기 갈비찜",
+			"imgPath": "/imgs/insta/insta-1.jpg"
+		},
+		{
+			"id": "2",
+			"alt": "인스타그램 고객 후기 에이드",
+			"imgPath": "/imgs/insta/insta-2.jpg"
+		},
+		{
+			"id": "3",
+			"alt": "인스타그램 고객 후기 주방용품",
+			"imgPath": "/imgs/insta/insta-3.webp"
+		},
+		{
+			"id": "4",
+			"alt": "인스타그램 고객 후기 디저트",
+			"imgPath": "/imgs/insta/insta-4.jpg"
+		},
+		{
+			"id": "5",
+			"alt": "인스타그램 고객 후기 호텔",
+			"imgPath": "/imgs/insta/insta-5.webp"
+		}
+	]
 }
