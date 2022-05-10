@@ -25,4 +25,5 @@ export default function InstaList() {
 const MyContainer = styled(Container)`
 	position: relative;
 	margin-top: 100px;
+	margin-bottom: 80px;
 `;
