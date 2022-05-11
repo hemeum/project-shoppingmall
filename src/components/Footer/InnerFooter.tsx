@@ -1,5 +1,5 @@
 import Container from '@mui/material/Container';
-import Call from './Call';
+import CallCenter from './CallCenter';
 import Company from './Company';
 import FootLink from './FootLink';
 import Desc from './Desc';
@@ -10,7 +10,7 @@ export default function InnerFooter() {
 	return (
 		<Con maxWidth="lg">
 			<div>
-				<Call></Call>
+				<CallCenter></CallCenter>
 				<Company></Company>
 			</div>
 			<FootLink></FootLink>
