@@ -16,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 				</Container>
 			</header>
 			<Component {...pageProps} />
-			<Footer></Footer>
+			<footer>
+				<Footer></Footer>
+			</footer>
 		</>
 	);
 }
