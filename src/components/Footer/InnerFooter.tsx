@@ -9,10 +9,10 @@ import styled from 'styled-components';
 export default function InnerFooter() {
 	return (
 		<Con maxWidth="lg">
-			<div>
+			<Box>
 				<CallCenter></CallCenter>
 				<Company></Company>
-			</div>
+			</Box>
 			<FootLink></FootLink>
 			<Desc></Desc>
 		</Con>
@@ -21,4 +21,9 @@ export default function InnerFooter() {
 
 const Con = styled(Container)`
 	padding: 20px 24px;
+`;
+
+const Box = styled.div`
+	display: flex;
+	gap: 50px;
 `;

@@ -47,7 +47,7 @@ const NumberBox = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	margin-top: 30px;
+	margin-top: 20px;
 	> p {
 		font-size: 30px;
 		font-weight: 700;
@@ -69,7 +69,7 @@ const NumberBox = styled.div`
 const ButtonBox = styled.div`
 	display: flex;
 	gap: 20px;
-	margin-top: 20px;
+	margin-top: 16px;
 	> button {
 		width: 150px;
 		height: 45px;
