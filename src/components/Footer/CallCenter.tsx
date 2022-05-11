@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function Call() {
+export default function CallCenter() {
 	return (
 		<>
 			<Con>
