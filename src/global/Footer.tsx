@@ -1,5 +1,5 @@
-import InnerFooter from '../components/Footer/InnerFooter';
-import Desc from '../components/Footer/Desc';
+import InnerFooter from '../components/footer/InnerFooter';
+import Desc from '../components/footer/Desc';
 
 import styled from 'styled-components';
 
