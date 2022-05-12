@@ -5,11 +5,11 @@ import ListBottom from '../../components/sub_list/ListBottom';
 
 import styled from 'styled-components';
 
-export interface ListProps {
+export interface SubListProps {
 	items: { id: string; alt: string; imgPath: string }[];
 }
 
-export default function InstaList({ items }: ListProps) {
+export default function InstaList({ items }: SubListProps) {
 	return (
 		<>
 			<MyContainer maxWidth="lg">

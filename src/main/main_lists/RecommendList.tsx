@@ -6,7 +6,7 @@ import ListsControll from '../../components/carousel/main_list/ListsControll';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
-export interface ListProps {
+export interface MainListProps {
 	items: {
 		id: string;
 		parentId: string;
@@ -20,7 +20,7 @@ export interface ListProps {
 	}[];
 }
 
-export default function RecommendList({ items }: ListProps) {
+export default function RecommendList({ items }: MainListProps) {
 	const [listTranslate, setListTranslate] = useState(0);
 
 	useEffect(() => {

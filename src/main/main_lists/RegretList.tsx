@@ -5,9 +5,9 @@ import ListsControll from '../../components/carousel/main_list/ListsControll';
 
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { ListProps } from './RecommendList';
+import { MainListProps } from './RecommendList';
 
-export default function RegretList({ items }: ListProps) {
+export default function RegretList({ items }: MainListProps) {
 	const [listTranslate, setListTranslate] = useState(0);
 
 	useEffect(() => {
