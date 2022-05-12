@@ -1,4 +1,5 @@
 import InnerFooter from '../components/Footer/InnerFooter';
+import Desc from '../components/Footer/Desc';
 
 import styled from 'styled-components';
 
@@ -7,7 +8,7 @@ export default function Footer() {
 		<>
 			<Hr></Hr>
 			<InnerFooter></InnerFooter>
-			<Hr></Hr>
+			<Desc></Desc>
 		</>
 	);
 }

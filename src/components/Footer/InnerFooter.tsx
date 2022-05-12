@@ -2,8 +2,6 @@ import Container from '@mui/material/Container';
 import CallCenter from './CallCenter';
 import Company from './Company';
 
-import Desc from './Desc';
-
 import styled from 'styled-components';
 
 export default function InnerFooter() {
@@ -13,7 +11,6 @@ export default function InnerFooter() {
 				<CallCenter></CallCenter>
 				<Company></Company>
 			</Box>
-			<Desc></Desc>
 		</Con>
 	);
 }
