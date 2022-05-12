@@ -2,27 +2,17 @@ import ListItem from './ListItem';
 
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
+import { ListProps } from '../../../main/RecommendList';
 
-interface ListsProps {
-	items: {
-		id: string;
-		parentId: string;
-		alt: string;
-		imgPath: string;
-		price: string;
-		discount: string;
-		desc: string;
-		only: boolean;
-		limit: boolean;
-	}[];
+interface ListsProps extends ListProps {
 	listTranslate: number;
 }
 
 export default function Lists({ items, listTranslate }: ListsProps) {
-	const newItems = [...items];
-	const firstItems = newItems.splice(0, 4);
-	const secondItems = newItems.splice(0, 4);
-	const thirdItems = newItems.splice(0, 4);
+	const newRecommend = [...items];
+	const firstRecommend = newRecommend.splice(0, 4);
+	const secondRecommend = newRecommend.splice(0, 4);
+	const thirdRecommend = newRecommend.splice(0, 4);
 
 	const conRef = useRef<HTMLDivElement>(null);
 
@@ -35,17 +25,17 @@ export default function Lists({ items, listTranslate }: ListsProps) {
 	return (
 		<Con ref={conRef}>
 			<List>
-				{firstItems.map((item) => {
+				{firstRecommend.map((item) => {
 					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>
 			<List>
-				{secondItems.map((item) => {
+				{secondRecommend.map((item) => {
 					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>
 			<List>
-				{thirdItems.map((item) => {
+				{thirdRecommend.map((item) => {
 					return <ListItem key={item.id} item={item}></ListItem>;
 				})}
 			</List>

@@ -1,11 +1,12 @@
 import Banner from '../components/carousel/main/Banner';
 
 import styled from 'styled-components';
-import data from './../../data.json';
 
-export default function MainBanner() {
-	const items = data.banners.main;
+export interface MainProps {
+	items: { id: string; alt: string; imgPath: string }[];
+}
 
+export default function MainBanner({ items }: MainProps) {
 	return (
 		<>
 			<Con>

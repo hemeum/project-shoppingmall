@@ -1,7 +1,6 @@
-import data from '../../data.json';
 import Banner from '../components/sub_banners/Banner';
+import { SubBannerProps } from './DiscountBanner';
 
-export default function DiscountBanner() {
-	const sub = data.banners.sub[1];
+export default function DeliveryBanner({ sub }: SubBannerProps) {
 	return <Banner sub={sub}></Banner>;
 }

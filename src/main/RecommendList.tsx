@@ -4,12 +4,23 @@ import Container from '@mui/material/Container';
 import ListsControll from '../components/carousel/list/ListsControll';
 
 import styled from 'styled-components';
-import data from '../../data.json';
 import { useState, useEffect } from 'react';
 
-export default function RecommendList() {
-	const items = data.recommend;
+export interface ListProps {
+	items: {
+		id: string;
+		parentId: string;
+		alt: string;
+		imgPath: string;
+		price: string;
+		discount: string;
+		desc: string;
+		only: boolean;
+		limit: boolean;
+	}[];
+}
 
+export default function RecommendList({ items }: ListProps) {
 	const [listTranslate, setListTranslate] = useState(0);
 
 	useEffect(() => {

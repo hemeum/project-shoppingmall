@@ -4,12 +4,10 @@ import Container from '@mui/material/Container';
 import ListsControll from '../components/carousel/list/ListsControll';
 
 import styled from 'styled-components';
-import data from '../../data.json';
 import { useState, useEffect } from 'react';
+import { ListProps } from './RecommendList';
 
-export default function RegretList() {
-	const items = data.regret;
-
+export default function RegretList({ items }: ListProps) {
 	const [listTranslate, setListTranslate] = useState(0);
 
 	useEffect(() => {

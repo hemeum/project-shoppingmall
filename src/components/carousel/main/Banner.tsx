@@ -5,17 +5,14 @@ import { useEffect, useRef, useState } from 'react';
 import BannerItem from './BannerItem';
 import BannerControll from './BannerControll';
 import BannerNumber from './BannerNumber';
-
-interface BannerProps {
-	items: { id: string; alt: string; imgPath: string }[];
-}
+import { MainProps } from './../../../main/MainBanner';
 
 interface styleProps {
 	ref: any;
 	length: number;
 }
 
-export default function Banner({ items }: BannerProps) {
+export default function Banner({ items }: MainProps) {
 	const CrsRef = useRef<HTMLDivElement>(null);
 
 	const [isNumber, setIsNumber] = useState(1);

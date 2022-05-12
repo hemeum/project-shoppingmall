@@ -4,10 +4,12 @@ import ListTitle from '../components/sub_lists/ListTitle';
 import ListBottom from '../components/sub_lists/ListBottom';
 
 import styled from 'styled-components';
-import data from './../../data.json';
 
-export default function InstaList() {
-	const items = data.insta;
+export interface ListProps {
+	items: { id: string; alt: string; imgPath: string }[];
+}
+
+export default function InstaList({ items }: ListProps) {
 	return (
 		<>
 			<MyContainer maxWidth="lg">

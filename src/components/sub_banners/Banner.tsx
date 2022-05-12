@@ -1,16 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 import Container from '@mui/material/Container';
+import { DiscountBannerProps } from '../../main/DiscountBanner';
 
-interface BannerProps {
-	sub: {
-		id: string;
-		imgPath: string;
-		alt: string;
-	};
-}
-
-export default function Banner({ sub }: BannerProps) {
+export default function Banner({ sub }: DiscountBannerProps) {
 	return (
 		<MyContainer maxWidth="lg">
 			<Img src={sub.imgPath} alt={sub.alt}></Img>
