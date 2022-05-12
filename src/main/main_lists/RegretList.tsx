@@ -1,7 +1,7 @@
-import Lists from '../components/carousel/list/Lists';
-import ListsTitle from '../components/carousel/list/ListsTitle';
+import Lists from '../../components/carousel/main_list/Lists';
+import ListsTitle from '../../components/carousel/main_list/ListsTitle';
 import Container from '@mui/material/Container';
-import ListsControll from '../components/carousel/list/ListsControll';
+import ListsControll from '../../components/carousel/main_list/ListsControll';
 
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';

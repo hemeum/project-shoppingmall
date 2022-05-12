@@ -2,7 +2,7 @@ import ListItem from './ListItem';
 
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
-import { ListProps } from '../../../main/RecommendList';
+import { ListProps } from '../../../main/main_lists/RecommendList';
 
 interface ListsProps extends ListProps {
 	listTranslate: number;

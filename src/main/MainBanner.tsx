@@ -1,4 +1,4 @@
-import Banner from '../components/carousel/main/Banner';
+import Banner from '../components/carousel/main_banner/Banner';
 
 import styled from 'styled-components';
 

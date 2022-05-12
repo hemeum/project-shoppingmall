@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 
 import MainBanner from '../src/main/MainBanner';
-import RecommendList from '../src/main/RecommendList';
-import DiscountBanner from '../src/main/DiscountBanner';
-import RegretList from '../src/main/RegretList';
-import DeliveryBanner from '../src/main/DeliveryBanner';
-import InstaList from '../src/main/InstaList';
+import RecommendList from '../src/main/main_lists/RecommendList';
+import DiscountBanner from '../src/main/sub_banners/DiscountBanner';
+import RegretList from '../src/main/main_lists/RegretList';
+import DeliveryBanner from '../src/main/sub_banners/DeliveryBanner';
+import InstaList from '../src/main/sub_lists/InstaList';
 
 import data from './../data.json';
 

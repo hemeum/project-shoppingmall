@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 
-import { ListProps } from '../../main/InstaList';
+import { ListProps } from '../../main/sub_lists/InstaList';
 
 export default function List({ items }: ListProps) {
 	return (

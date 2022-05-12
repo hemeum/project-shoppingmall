@@ -1,4 +1,4 @@
-import Banner from '../components/sub_banners/Banner';
+import Banner from '../../components/sub_banner/Banner';
 
 export interface SubBannerProps {
 	sub: {
