@@ -6,26 +6,26 @@ import { SubListProps } from '../../main/sub_lists/InstaList';
 export default function List({ items }: SubListProps) {
 	return (
 		<>
-			<Instas>
+			<Sub>
 				{items.map((insta) => {
 					return (
-						<InstaItem key={Number(insta.id)}>
+						<SubItem key={Number(insta.id)}>
 							<img src={insta.imgPath} alt={insta.alt}></img>
-						</InstaItem>
+						</SubItem>
 					);
 				})}
-			</Instas>
+			</Sub>
 		</>
 	);
 }
 
-const Instas = styled.ul`
+const Sub = styled.ul`
 	display: flex;
 	width: 100%;
 	height: 200px;
 `;
 
-const InstaItem = styled.li`
+const SubItem = styled.li`
 	width: 20%;
 	height: 100%;
 	cursor: pointer;
