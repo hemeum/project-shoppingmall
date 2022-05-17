@@ -1,5 +1,5 @@
 import UserMenu from '../components/menu/UserMenu';
-import HeaderTop from '../components/content/HeaderTop';
+import HeaderTop from '../components/header/HeaderTop';
 import GlobalMenu from '../components/menu/GlobalMenu';
 import SearchInput from '../components/search/SearchInput';
 import IconMenu from '../components/menu/IconMenu';
