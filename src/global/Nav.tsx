@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 export default function Nav() {
 	return (
-		<>
+		<nav>
 			<UserMenu></UserMenu>
 			<HeaderTop></HeaderTop>
 			<HeaderBottom>
@@ -16,7 +16,7 @@ export default function Nav() {
 				<SearchInput></SearchInput>
 				<IconMenu></IconMenu>
 			</HeaderBottom>
-		</>
+		</nav>
 	);
 }
 

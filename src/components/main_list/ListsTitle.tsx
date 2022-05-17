@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function ListsTitle({ title }: { title: string }) {
+export default function ListsTitle({ title }: { title: string | undefined }) {
 	return (
 		<Con>
 			<Title>{title}</Title>

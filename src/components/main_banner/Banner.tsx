@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import BannerItem from './BannerItem';
 import BannerControll from './BannerControll';
 import BannerNumber from './BannerNumber';
-import { MainBannerProps } from '../../../main/MainBanner';
+import { MainBannerProps } from '../../main/MainBanner';
 
 interface styleProps {
 	ref: any;

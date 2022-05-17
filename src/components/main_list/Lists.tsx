@@ -2,7 +2,7 @@ import ListItem from './ListItem';
 
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
-import { MainListProps } from '../../../main/main_lists/RecommendList';
+import { MainListProps } from '../../main/MainList';
 
 interface ListsProps extends MainListProps {
 	listTranslate: number;
@@ -43,7 +43,7 @@ export default function Lists({ items, listTranslate }: ListsProps) {
 	);
 }
 
-const Con = styled.div`
+const Con = styled.article`
 	width: 300%;
 	display: flex;
 	transition: all 0.5s;

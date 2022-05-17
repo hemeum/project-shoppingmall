@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export default function ListTitle({
 	title,
-	sub,
+	info,
 }: {
-	title: string;
-	sub: string;
+	title: string | undefined;
+	info: string | undefined;
 }) {
 	return (
 		<Con>
 			<TextCon>
 				<Title>{title}</Title>
-				<Sub>{sub}</Sub>
+				<Info>{info}</Info>
 			</TextCon>
 		</Con>
 	);
@@ -35,7 +35,7 @@ const Title = styled.h3`
 	font-weight: bold;
 `;
 
-const Sub = styled.p`
+const Info = styled.p`
 	color: gray;
 	margin-top: 20px;
 `;

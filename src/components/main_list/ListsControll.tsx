@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
-import data from '../../../../data.json';
+import data from '../../../data.json';
 
 interface ListsControllProps {
 	listTranslate: number;

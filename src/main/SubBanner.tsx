@@ -1,4 +1,4 @@
-import Banner from '../../components/sub_banner/Banner';
+import Banner from '../components/sub_banner/Banner';
 
 export interface SubBannerProps {
 	sub: {
@@ -8,6 +8,6 @@ export interface SubBannerProps {
 	};
 }
 
-export default function DiscountBanner({ sub }: SubBannerProps) {
+export default function SubBanner({ sub }: SubBannerProps) {
 	return <Banner sub={sub}></Banner>;
 }

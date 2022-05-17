@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 import Container from '@mui/material/Container';
-import { SubBannerProps } from '../../main/sub_banners/DiscountBanner';
+import { SubBannerProps } from '../../main/SubBanner';
 
 export default function Banner({ sub }: SubBannerProps) {
 	return (

@@ -2,11 +2,9 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 
 import MainBanner from '../src/main/MainBanner';
-import RecommendList from '../src/main/main_lists/RecommendList';
-import DiscountBanner from '../src/main/sub_banners/DiscountBanner';
-import RegretList from '../src/main/main_lists/RegretList';
-import DeliveryBanner from '../src/main/sub_banners/DeliveryBanner';
-import InstaList from '../src/main/sub_lists/InstaList';
+import MainList from '../src/main/MainList';
+import SubList from '../src/main/SubList';
+import SubBanner from '../src/main/SubBanner';
 
 import data from './../data.json';
 
@@ -21,12 +19,28 @@ const Home: NextPage = ({
 	return (
 		<>
 			<Main>
-				<MainBanner items={main}></MainBanner>
-				<RecommendList items={recommend}></RecommendList>
-				<DiscountBanner sub={firstSub}></DiscountBanner>
-				<RegretList items={regret}></RegretList>
-				<DeliveryBanner sub={secondSub}></DeliveryBanner>
-				<InstaList items={insta}></InstaList>
+				<section>
+					<MainBanner items={main}></MainBanner>
+				</section>
+				<section>
+					<MainList items={recommend} title={'이 상품 어때요?'}></MainList>
+				</section>
+				<section>
+					<SubBanner sub={firstSub}></SubBanner>
+				</section>
+				<section>
+					<MainList items={regret} title={'놓치면 후회할 가격!'}></MainList>
+				</section>
+				<section>
+					<SubBanner sub={secondSub}></SubBanner>
+				</section>
+				<section>
+					<SubList
+						items={insta}
+						title={'인스타그램 고객 후기'}
+						info={'더 많은 고객 후기가 궁금하다면?'}
+					></SubList>
+				</section>
 			</Main>
 		</>
 	);

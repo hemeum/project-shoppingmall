@@ -1,13 +1,27 @@
-import Lists from '../../components/carousel/main_list/Lists';
-import ListsTitle from '../../components/carousel/main_list/ListsTitle';
+import Lists from '../components/main_list/Lists';
+import ListsTitle from '../components/main_list/ListsTitle';
 import Container from '@mui/material/Container';
-import ListsControll from '../../components/carousel/main_list/ListsControll';
+import ListsControll from '../components/main_list/ListsControll';
 
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { MainListProps } from './RecommendList';
 
-export default function RegretList({ items }: MainListProps) {
+export interface MainListProps {
+	items: {
+		id: string;
+		parentId: string;
+		alt: string;
+		imgPath: string;
+		price: string;
+		discount: string;
+		desc: string;
+		only: boolean;
+		limit: boolean;
+	}[];
+	title?: string;
+}
+
+export default function MainList({ items, title }: MainListProps) {
 	const [listTranslate, setListTranslate] = useState(0);
 
 	useEffect(() => {
@@ -18,10 +32,10 @@ export default function RegretList({ items }: MainListProps) {
 
 	return (
 		<Con maxWidth="lg">
-			<ListCon maxWidth="lg">
-				<ListsTitle title={'놓치면 후회할 가격!'}></ListsTitle>
+			<ListsTitle title={title}></ListsTitle>
+			<ListBox maxWidth="lg">
 				<Lists items={items} listTranslate={listTranslate}></Lists>
-			</ListCon>
+			</ListBox>
 			<ListsControll
 				listTranslate={listTranslate}
 				setListTranslate={setListTranslate}
@@ -32,11 +46,11 @@ export default function RegretList({ items }: MainListProps) {
 
 const Con = styled(Container)`
 	position: relative;
+	margin-top: 100px;
 `;
 
-const ListCon = styled(Container)`
+const ListBox = styled(Container)`
 	position: relative;
-	margin-top: 100px;
 	padding: 0;
 	overflow: hidden;
 `;

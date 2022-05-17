@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 
-import { SubListProps } from '../../main/sub_lists/InstaList';
+import { SubListProps } from '../../main/SubList';
 
 export default function List({ items }: SubListProps) {
 	return (
